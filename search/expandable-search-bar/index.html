@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Expandable Search Bar</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <div class="search">
+            <div class="icon"></div>
+            <div class="input">
+                <input type="text" id="searchIT" placeholder="type here">
+            </div>
+            <span class="clear" onclick="document.getElementById('searchIT').value = ''"></span>
+        </div>
+        <script>
+            const icon = document.querySelector('.icon');
+            const search = document.querySelector('.search');
+            icon.onclick = function() {
+                search.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>

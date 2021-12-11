@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+label {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+label input {
+    position: relative;
+    z-index: 1;
+    appearance: none;
+}
+
+label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #777;
+    border-radius: 80px;
+    transition: 0.5s;
+    box-shadow: 0 15px 15px #77777755;
+}
+
+label input:checked ~ span{
+    background: #05be05;
+    box-shadow: 0 15px 15px #05be0555;
+}
+
+label span i {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 72px;
+    height: 72px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.1s;
+}
+
+label input:checked ~ span i {
+    /* left: 84px; */
+}
+
+label span i::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    background: #777;
+    border-radius: 50%;
+    box-shadow: 35px 0 0 #777;
+}
+
+label input:checked ~ span i::before {
+    background: #05be05;
+    box-shadow: 35px 0 0 #05be05;
+}
+
+label span i::after {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    left: calc(50% - 14px);
+    width: 30px;
+    height: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background: #777;
+    transition: 0.1s;
+}
+
+label input:checked ~ span i::after {
+    bottom: 12px;
+    border-radius: 0;
+    height: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background: #05be05;
+}

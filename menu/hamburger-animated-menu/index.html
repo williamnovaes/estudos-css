@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Animated hamburguer menu</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <div class="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <script>
+            let menutoggle = document.querySelector('.toggle');
+            menutoggle.onclick = function() {
+                menutoggle.classList.toggle('active'); 
+            }
+        </script>
+    </body>
+</html>
